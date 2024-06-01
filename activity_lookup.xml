@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LookupActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/title_padding"
+        android:text="Morse Code"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/tvLetters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_padding"
+        android:text="Letters (*=accented)
+"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <LinearLayout
+        android:id="@+id/llLetters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tvFigures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLetters">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tva"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="a .-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="b -..."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="c -.-."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="d -.."
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tve"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="e ."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tveaccent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="e* ..-.."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="f ..-."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="g --."
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="h ...."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="i .."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvj"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="j .---"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="k -.-"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="l .-.."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="m --"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="n -."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="o ---"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="p .--."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="q --.-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="r .-."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="s ..."
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="t -"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="u ..-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="v ...-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="w .--"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="x -..-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="y -.--"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="z --.."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvdummy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="sp ..."
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvFigures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_padding"
+        android:text="Figures"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llLetters" />
+
+    <LinearLayout
+        android:id="@+id/llDigits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFigures">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 -----"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="1 .----"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="2 ..---"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="3 ...--"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="4 ....-"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="5 ....."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="6 -...."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="7 --..."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="8 ---.."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="9 ----."
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPunc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_padding"
+        android:text="Punctuation and Misc"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llDigits" />
+
+    <LinearLayout
+        android:id="@+id/llPunc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPunc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvpunc2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text=". .-.-.-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text=", --..--"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="End of Work ...-.-"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvpunc5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="\? ..--.."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="' .----."
+                android:textSize="@dimen/small_text_size" />
+
+
+
+            <TextView
+                android:id="@+id/tvpunc18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="Wait .-..."
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvpunc8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="/ -..-."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="( -.--."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="Error ........"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/punc11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="&quot; .-..-."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="= -...-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="Understood ...-."
+                android:textSize="@dimen/small_text_size" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvpunc10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text=") -.--.-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="+ .-.-.-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="Invitation Xmit -.-"
+                android:textSize="@dimen/small_text_size" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvpunc7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="- -....-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text=": ---..."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="Start Msg -.-.-."
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvpunc21"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="\u00D7 -..-"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="morseClick"
+                android:text="\@ .--.-."
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvpunc24"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="morseClick"
+                android:text="Space (word) ......."
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Select: n/a"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
